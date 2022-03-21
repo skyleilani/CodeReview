@@ -10,12 +10,14 @@ fixed4 frag(v2f i) : SV_Target
                 // mandelbrot fractal algorithm  
                 // Z = Z^2 + C
                 
-                // start position of pixel, initialized to coordinate of pixel we're focused on   
+                // start position of pixel, initialized to coordinate of pixel we're focused on 
+                // C represents the complex numbers in Z = Z^2 + C :) 
                 float2 C = _Area.xy + (i.uv - 0.5) * _Area.zw; 
                 
                 C = rotate(C, _Area.xy, _Angle);
                 
                 // current pos of pixel (updates)
+               
                 float2 z;
 
                 for (float i = 0; i < 255; i++) {
@@ -38,7 +40,12 @@ fixed4 frag(v2f i) : SV_Target
  ### context & explanation ### 
  
  for reference, the equation for the mandelbrot fractal is 
- *Z = Z^2 + C*
+ *Z = Z^2 + C* <-  this is the best one to reference in my code, but you can also look at this other representation that accounts for n as well
+ *Zn+1 = Zn2 + C* 
+ 
+ *C* - constant; complex number; a coordinate within 2 units of original origin 
+ *Z* - also a complex number, but not a constant. 
+ *n* - 0 or a natural number 
  
  The code snippet above is the core of this mandelbrot explorer, as without it we have no mandelbrot to explore. 
  It's a fragment shader, so it's essentially placing potential pixels based on this iterative function we have. 
