@@ -54,8 +54,10 @@ fixed4 frag(v2f i) : SV_Target
  ************ ************ ************
 
  
- The code snippet above is the core of this mandelbrot explorer, as without it we have no mandelbrot to explore. 
- It's a fragment shader, so it's essentially placing potential pixels based on this iterative function we have. 
+ The code snippet above is the core of this mandelbrot explorer, since without it we have no mandelbrot to explore. 
+ It's a fragment shader, so it's essentially going through potential pixels based on this iterative function we have and deciding how to color each one. It's run thru the GPU which is very nice and fast ;)
+ 
+ This is my first project using shaders, they're super fun if you enjoy visualizing numbers.
  
  This is an Image Effect shader written in Open GL Shading Language (GLSL) rendered in Unity. 
  
