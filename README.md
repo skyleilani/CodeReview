@@ -1,4 +1,4 @@
-# CodeReview
+# code review
 Code review of a very basic mandelbrot shader explorer built in unity and embedded in a basicazz webpage run in React 
 
 [Explore Mandelbrot Fractal Shader Here](https://f05unt.csb.app/)
