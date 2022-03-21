@@ -40,12 +40,19 @@ fixed4 frag(v2f i) : SV_Target
  ### context & explanation ### 
  
  for reference, the equation for the mandelbrot fractal is 
+ 
  *Z = Z^2 + C* <-  this is the best one to reference in my code, but you can also look at this other representation that accounts for n as well
+ 
  *Zn+1 = Zn2 + C* 
  
  *C* - constant; complex number; a coordinate within 2 units of original origin 
+ 
  *Z* - also a complex number, but not a constant. 
+ 
  *n* - 0 or a natural number 
+ 
+ ************ ************ ************
+
  
  The code snippet above is the core of this mandelbrot explorer, as without it we have no mandelbrot to explore. 
  It's a fragment shader, so it's essentially placing potential pixels based on this iterative function we have. 
