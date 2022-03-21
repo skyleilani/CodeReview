@@ -8,7 +8,7 @@ Code review of a very basic mandelbrot shader explorer built in unity and embedd
 fixed4 frag(v2f i) : SV_Target
             {
                 // mandelbrot fractal algorithm  
-                // V = V^2 + C
+                // Z = Z^2 + C
                 
                 // start position of pixel, initialized to coordinate of pixel we're focused on   
                 float2 C = _Area.xy + (i.uv - 0.5) * _Area.zw; 
@@ -25,7 +25,7 @@ fixed4 frag(v2f i) : SV_Target
                     //  (updated_x     ,  updated_y ) + C
                     // Z^2 + C 
                     
-                    z = float2(z.x * z.x - z.y * z.y, 2 * z.x * z.y) + C;
+                    z = float2(z.x * z.x - z.y * z.y, 2 * z.x * z.y) + C; // Z = Z_SQ
 
                     // breakout of loop
                     if (length(z) > 2) break;
@@ -38,12 +38,12 @@ fixed4 frag(v2f i) : SV_Target
  ### context & explanation ### 
  
  for reference, the equation for the mandelbrot fractal is 
- *V = V^2 + C*
+ *Z = Z^2 + C*
  
  This is an Image Effect shader written in Open GL Shading Language (GLSL) rendered in Unity. 
  
  The movement (ability to use WASD keys to navigate the fractal) is written in a C# script. 
  
- Both the fragment shader and the C# script are attached to the same Canvas( which laregely focuses on 2D graphics and UI elements positioned in Unity's 3D space )
+ Both the fragment shader and the C# script are attached to the same Canvas( which largely focuses on 2D graphics and UI elements positioned in Unity's 3D space )
  
  
