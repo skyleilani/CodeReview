@@ -6,12 +6,15 @@ Code review of a very basic mandelbrot shader explorer built in unity and embedd
 ```
 fixed4 frag(v2f i) : SV_Target
             {
-                 // mandelbrot fractal algorithm  
+                // mandelbrot fractal algorithm  
                 // V = V^2 + C
-                // start position of pixel, initialized to uv coordinate. 
-                float2 C = _Area.xy + (i.uv - 0.5) * _Area.zw; // .zw = last two coords (x, y, z, w) from _Area (4, 4) 
+                
+                // start position of pixel, initialized to coordinate of pixel we're focused on   
+                float2 C = _Area.xy + (i.uv - 0.5) * _Area.zw; 
+                
                 C = rotate(C, _Area.xy, _Angle);
-                // keep track of where pixel is jumping across the string
+                
+                // current pos of pixel (updates)
                 float2 z;
 
                 for (float i = 0; i < 255; i++) {
@@ -20,6 +23,7 @@ fixed4 frag(v2f i) : SV_Target
                     // ((z.x^2 * z.y^2),    (2(z.x) * z.y)) + Start position
                     //  (updated_x     ,  updated_y ) + C
                     // Z^2 + C 
+                    
                     z = float2(z.x * z.x - z.y * z.y, 2 * z.x * z.y) + C;
 
                     // breakout of loop
