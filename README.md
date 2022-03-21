@@ -3,7 +3,7 @@ Code review of a very basic mandelbrot shader explorer built in unity and embedd
 
 
 #### mandelbrot code snippet ####
-
+```
 fixed4 frag(v2f i) : SV_Target
             {
                  // mandelbrot fractal algorithm  
@@ -29,7 +29,7 @@ fixed4 frag(v2f i) : SV_Target
                 float4 result = sin(float4(0.15f, 0.08f, 25, 1) * i/20);
                 return result;
             }
- 
+ ```
  ### context & explanation ### 
  
  for reference, the equation for the mandelbrot fractal is 
