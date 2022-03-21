@@ -38,7 +38,7 @@ fixed4 frag(v2f i) : SV_Target
  ### context & explanation ### 
  
  for reference, the equation for the mandelbrot fractal is 
- V = V^2 + C
+ *V = V^2 + C*
  
  This is an Image Effect shader written in Open GL Shading Language (GLSL) rendered in Unity. 
  
