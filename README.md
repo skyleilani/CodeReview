@@ -40,6 +40,10 @@ fixed4 frag(v2f i) : SV_Target
  for reference, the equation for the mandelbrot fractal is 
  V = V^2 + C
  
+ This is an Image Effect shader written in Open GL Shading Language (GLSL) rendered in Unity. 
  
+ The movement (ability to use WASD keys to navigate the fractal) is written in a C# script. 
+ 
+ Both the fragment shader and the C# script are attached to the same Canvas( which laregely focuses on 2D graphics and UI elements positioned in Unity's 3D space )
  
  
