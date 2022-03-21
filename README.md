@@ -40,6 +40,9 @@ fixed4 frag(v2f i) : SV_Target
  for reference, the equation for the mandelbrot fractal is 
  *Z = Z^2 + C*
  
+ The code snippet above is the core of this mandelbrot explorer, as without it we have no mandelbrot to explore. 
+ It's a fragment shader, so it's essentially placing potential pixels based on this iterative function we have. 
+ 
  This is an Image Effect shader written in Open GL Shading Language (GLSL) rendered in Unity. 
  
  The movement (ability to use WASD keys to navigate the fractal) is written in a C# script. 
