@@ -3,7 +3,7 @@ Code review of a very basic mandelbrot shader explorer built in unity and embedd
 
 [Explore Mandelbrot Fractal Shader Here](f05unt.csb.app/)
 
-#### mandelbrot code snippet from mandelbrot.glslf####
+#### mandelbrot code snippet from mandelbrot.glslf ####
 ```
 fixed4 frag(v2f i) : SV_Target
             {
