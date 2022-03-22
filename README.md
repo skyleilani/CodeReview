@@ -39,6 +39,8 @@ fixed4 frag(v2f i) : SV_Target
  ```
  ### context & explanation ### 
  
+ ![alt text](https://imgur.com/gallery/nQJhz4N)
+ 
  for reference, the equation for the mandelbrot fractal is 
  
  *Z = Z^2 + C* <-  this is the best one to reference in my code, but you can also look at this other representation that accounts for n as well
