@@ -41,20 +41,37 @@ fixed4 frag(v2f i) : SV_Target
  
  ![click to see image of ](https://i.imgur.com/aG6VW5t.png)
  
- for reference, the equation for the mandelbrot fractal is 
+ As you can see there is a canvas in a 3D space in the main scene. The canvas has a raw image UI element attached to it. That raw image element has our mandelbrot shader attatched to it. 
  
- *Z = Z^2 + C* <-  this is the best one to reference in my code, but you can also look at this other representation that accounts for n as well
  
- *Zn+1 = Zn2 + C* 
+ #### what is a shader? #### 
+ 
+ - A shader is a set of instructions for rendering graphics that are applied to every pixel on the screen at the same time, depending on the pixels position. These instructions are run through the GPU. 
+
+- There are a lot of types of shaders, but I am using an Image Effect shader which contains the functions for a *vertex shader* and a *fragment shader*
+ 
+* Vertex Shader - 
+        - transform the shape of the object via triangle points (vertices) 
+        - this is the v2f vert() function (the v2f(vertex to fragment) struct           is defined earlier in my code
+
+
+* Fragment Shader - 
+         - change the appearance of the pixels
+         - this is the fixed4 frag(v2f i) function, which clearly is taking              in an argument *i* of the type 'vertex to fragment' (referencing              vertex to fragment shader data transfer) 
+
+
+
+ ************ ************ ************
+ 
+#### mandelbrot equation ####
+ 
+ *Z = Z^2 + C*
  
  *C* - constant; complex number; a coordinate within 2 units of original origin 
  
  *Z* - also a complex number, but not a constant. 
  
- *n* - 0 or a natural number 
- 
  ************ ************ ************
-
  
  The code snippet above is the core of this mandelbrot explorer, since without it we have no mandelbrot to explore. 
  It's a fragment shader, so it's essentially going through potential pixels based on this iterative function we have and deciding how to color each one. It's run thru the GPU which is very nice and fast ;)
