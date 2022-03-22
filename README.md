@@ -82,11 +82,17 @@ fixed4 frag(v2f i) : SV_Target
  
  The movement (ability to use WASD keys to navigate the fractal) is written in a C# script. 
  
- Both the fragment shader and the C# script are attached to the same Canvas( which largely focuses on 2D graphics and UI elements positioned in Unity's 3D space )
- 
  
  ### Technologies Used ### 
  
  - Unity game engine
- - fragment shader 
- - React
+ - glsl shader 
+
+#### Further Info & Links ####
+
+(what is openGL?)[https://openglbook.com/chapter-0-preface-what-is-opengl.html]
+(what are glsl shaders? MDN reference)[https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders]
+(vertex shader)[https://www.pcmag.com/encyclopedia/term/vertex-shader]
+
+
+ 
