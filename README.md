@@ -39,7 +39,7 @@ fixed4 frag(v2f i) : SV_Target
  ```
  ### context & explanation ### 
  
- ![click to see image of ](https://i.imgur.com/GzYHLRJ.png)
+ ![click to see image of ](https://i.imgur.com/aG6VW5t.png)
  
  for reference, the equation for the mandelbrot fractal is 
  
