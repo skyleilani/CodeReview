@@ -90,9 +90,9 @@ fixed4 frag(v2f i) : SV_Target
 
 #### Further Info & Links ####
 
-(what is openGL?)[https://openglbook.com/chapter-0-preface-what-is-opengl.html]
-(what are glsl shaders? MDN reference)[https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders]
-(vertex shader)[https://www.pcmag.com/encyclopedia/term/vertex-shader]
+[what is openGL?](https://openglbook.com/chapter-0-preface-what-is-opengl.html)
+[what are glsl shaders? MDN reference](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)
+[vertex shader](https://www.pcmag.com/encyclopedia/term/vertex-shader)
 
 
  
