@@ -3,7 +3,7 @@ Code review of a very basic mandelbrot shader explorer built in unity and embedd
 
 [Explore Mandelbrot Fractal Shader Here](https://f05unt.csb.app/)
 
-#### mandelbrot code snippet from mandelbrot.glslf ####
+#### mandelbrot code snippet from mandelbrot.hlsl ####
 ```
 fixed4 frag(v2f i) : SV_Target
             {
@@ -86,11 +86,11 @@ fixed4 frag(v2f i) : SV_Target
  ### Technologies Used ### 
  
  - Unity game engine
- - glsl shader 
+ - hlsl shader (high level shading language)
 
 #### Further Info & Links ####
 
-[what is openGL?](https://openglbook.com/chapter-0-preface-what-is-opengl.html)
+[what is hlsl?](https://openglbook.com/chapter-0-preface-what-is-opengl.html)
 
 [what are glsl shaders? MDN reference](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)
 
